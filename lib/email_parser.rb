@@ -6,9 +6,9 @@ class EmailAddressParser
     into=[]
     all_commas=@emails
     while all_commas.include?(" ")
-  p  all_commas=@emails.sub!(" ",",")
+      all_commas=@emails.sub!(" ",",")
     end
-  p  seperated=all_commas.split(",")
+      seperated=all_commas.split(",")
     seperated.each do |email|
       if !into.include?(email)&&email!=""
         into<<email
