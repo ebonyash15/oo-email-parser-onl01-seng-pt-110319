@@ -6,12 +6,7 @@ class EmailAddressParser
   attr_accessor :emails
   def parse
     into=[]
-    @emails.split(" ").each do |email|
-      if !into.include?(email)
-        into<<email
-      end
-    end
-    @emails.split(",").each  do |email|
+    @emails.split(" ").each||@emails.split(",").each do |email|
       if !into.include?(email)
         into<<email
       end
