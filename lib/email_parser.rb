@@ -8,17 +8,14 @@ class EmailAddressParser
   end
   def parse
     into=[]
-    seperated=@emails
-    while seperated.include?(", "||","||" ")
-      case seperated.include?("n")
-      when n=","
+    seperated=@emails.scan(/\w@\./)
+      if seperated.include?(",")
         seperated = @emails.split(",")
-      when n=", "
+      elsif seperated.include?(", ")
         seperated = @emails.split(", ")
-      else
+      elsif seperated.include?(" ")
         seperated = @emails.split(" ")
       end
-    end
     seperated.each do |email|
       if !into.include?(email)
         into<<email
