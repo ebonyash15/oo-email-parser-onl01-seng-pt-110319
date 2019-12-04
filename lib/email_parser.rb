@@ -4,6 +4,7 @@ class EmailAddressParser
   end
   def parse
     into=[]
+    all_commas=@emails
     while all_commas.include?(" ")
   p  all_commas=@emails.sub!(" ",",")
     end
