@@ -14,7 +14,7 @@ class EmailAddressParser
       seperated = @emails.split(" ")
     end
     seperated.each do |email|
-      if !into.include?(email ||(" #{email}"))
+      if !into.include?(" #{email}") && !into.include?(email)
         into<<email
       end
     end
