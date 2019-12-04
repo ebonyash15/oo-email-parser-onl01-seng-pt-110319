@@ -8,13 +8,14 @@ class EmailAddressParser
   end
   def parse
     into=[]
-    if @emails.include?(", ")
-      seperated = @emails.split(", ")
-    elsif @emails.include?(",")
-      seperated = @emails.split(",")
-    else
-      seperated = @emails.split(" ")
-    end
+  #  if @emails.include?(", ")
+  #    seperated = @emails.split(", ")
+  #  elsif @emails.include?(",")
+  #    seperated = @emails.split(",")
+  #  else
+  #    seperated = @emails.split(" ")
+  #  end
+  seperated=email(/[A-z0-9@\.]/)
     seperated.each do |email|
       if !into.include?(email)
         into<<email
