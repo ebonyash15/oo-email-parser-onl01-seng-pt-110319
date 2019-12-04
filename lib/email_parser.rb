@@ -16,5 +16,6 @@ class EmailAddressParser
         into<<email
       end
     end
+    into
   end
 end
