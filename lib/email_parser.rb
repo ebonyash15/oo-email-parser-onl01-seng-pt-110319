@@ -15,7 +15,8 @@ class EmailAddressParser
   #  else
   #    seperated = @emails.split(" ")
   #  end
-  seperated=email(/[A-z0-9@\.]/)
+  no_commas=email(/[A-z0-9@\.\s]/)
+  seperated=no_commas.split(" ")
     seperated.each do |email|
       if !into.include?(email)
         into<<email
