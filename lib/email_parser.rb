@@ -10,11 +10,13 @@ class EmailAddressParser
     into=[]
     if @emails.include?(",")
       seperated = @emails.split(",")
+    elsif @emails.include?(", ")
+      seperated = @emails.split(", ")
     else
       seperated = @emails.split(" ")
     end
     seperated.each do |email|
-      if !into.include?(" #{email}") && !into.include?(email)
+      if !into.include?(email)
         into<<email
       end
     end
