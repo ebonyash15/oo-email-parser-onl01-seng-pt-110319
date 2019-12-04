@@ -8,7 +8,7 @@ class EmailAddressParser
   end
   def parse
     into=[]
-    seperated=@emails.scan(/\w@\./)
+    seperated=@emails.scan(/\s,/)
 #      if seperated.include?(",")
 #        seperated = @emails.split(",")
 #      elsif seperated.include?(", ")
