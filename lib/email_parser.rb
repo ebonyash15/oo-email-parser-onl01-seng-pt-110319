@@ -1,7 +1,4 @@
-# Build a class EmailParser that accepts a string of unformatted
-# emails. The parse method on the class should separate them into
-# unique email addresses. The delimiters to support are commas (',')
-# or whitespace (' ').
+require pry
 class EmailAddressParser
   def initialize(emails)
     @emails = emails
@@ -10,13 +7,7 @@ class EmailAddressParser
     into=[]
     all_commas=@emails.sub!(" ",",")
     seperated=all_commas.split(",")
-#      if seperated.include?(",")
-#        seperated = @emails.split(",")
-#      elsif seperated.include?(", ")
-#        seperated = @emails.split(", ")
-#      elsif seperated.include?(" ")
-#        seperated = @emails.split(" ")
-#      end
+    binding pry
     seperated.each do |email|
       if !into.include?(email)&&email!=","&&email!=""
         into<<email
