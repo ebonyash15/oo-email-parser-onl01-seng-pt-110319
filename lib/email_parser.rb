@@ -9,13 +9,13 @@ class EmailAddressParser
   def parse
     into=[]
     seperated=@emails.scan(/\w@\./)
-      if seperated.include?(",")
-        seperated = @emails.split(",")
-      elsif seperated.include?(", ")
-        seperated = @emails.split(", ")
-      elsif seperated.include?(" ")
-        seperated = @emails.split(" ")
-      end
+#      if seperated.include?(",")
+#        seperated = @emails.split(",")
+#      elsif seperated.include?(", ")
+#        seperated = @emails.split(", ")
+#      elsif seperated.include?(" ")
+#        seperated = @emails.split(" ")
+#      end
     seperated.each do |email|
       if !into.include?(email)
         into<<email
