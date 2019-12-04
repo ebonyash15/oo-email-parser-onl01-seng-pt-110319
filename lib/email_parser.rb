@@ -5,6 +5,7 @@
 class EmailAddressParser
   def initalise(emails)
     @emails = emails
+  end
   def parse
     into=[]
     @emails.split(" ").each||@emails.split(",").each do |email|
