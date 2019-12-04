@@ -8,8 +8,8 @@ class EmailAddressParser
   end
   def parse
     into=[]
-    seperated=@emails.sub!(" ",",")
-    seperated=seperated.split(",")
+    all_commas=@emails.sub!(" ",",")
+    seperated=all_commas.split(",")
 #      if seperated.include?(",")
 #        seperated = @emails.split(",")
 #      elsif seperated.include?(", ")
