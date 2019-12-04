@@ -8,7 +8,8 @@ class EmailAddressParser
   end
   def parse
     into=[]
-    @emails.split(" ").each||@emails.split(",").each do |email|
+    seperated = @emails.split(" ")||@emails.split(",")
+     seperated.each do |email|
       if !into.include?(email)
         into<<email
       end
