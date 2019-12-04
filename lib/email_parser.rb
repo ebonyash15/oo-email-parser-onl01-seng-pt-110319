@@ -9,10 +9,12 @@ class EmailAddressParser
   def parse
     into=[]
     seperated=@emails
-    if seperated.include?(", ")
+    if seperated.include?(",")
+      if seperated.include?(", ")
       seperated = @emails.split(", ")
-    elsif seperated.include?(",")
-      seperated = @emails.split(",")
+      else 
+        seperated = @emails.split(",")
+      end
     else
       seperated = @emails.split(" ")
     end
