@@ -10,7 +10,7 @@ class EmailAddressParser
     into=[]
     seperated=@emails.split(", "||","||" ")
   #  if seperated.include?(",")
-  Z#    if seperated.include?(", ")
+  #    if seperated.include?(", ")
     #  seperated = @emails.split(", ")
     #  else
     #    seperated = @emails.split(",")
