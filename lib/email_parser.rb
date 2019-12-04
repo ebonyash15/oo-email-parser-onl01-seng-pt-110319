@@ -1,13 +1,11 @@
-require pry
 class EmailAddressParser
   def initialize(emails)
     @emails = emails
   end
   def parse
     into=[]
-    all_commas=@emails.sub!(" ",",")
-    seperated=all_commas.split(",")
-    binding.pry
+  p  all_commas=@emails.sub!(" ",",")
+  p  seperated=all_commas.split(",")
     seperated.each do |email|
       if !into.include?(email)&&email!=","&&email!=""
         into<<email
