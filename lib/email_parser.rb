@@ -12,7 +12,7 @@ class EmailAddressParser
     if seperated.include?(",")
       if seperated.include?(", ")
       seperated = @emails.split(", ")
-      else 
+      else
         seperated = @emails.split(",")
       end
     else
